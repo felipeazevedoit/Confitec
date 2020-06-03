@@ -9,6 +9,8 @@ namespace Usuarios.Dominio.Interfaces.Repositorio
         T Adicionar(T obj);
         T Alterar(T obj);
         IEnumerable<T> Listar();
-        bool Excluir(int id);
+        T ObterPorId(int id);
+
+        void Excluir(int id);
     }
 }
