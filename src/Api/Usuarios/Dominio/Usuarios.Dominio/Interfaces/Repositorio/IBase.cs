@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Usuarios.Dominio.Interfaces
+namespace Usuarios.Dominio.Interfaces.Repositorio
 {
     public interface IBase<T> where T: class
     {
