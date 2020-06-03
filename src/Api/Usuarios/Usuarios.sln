@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Usuarios.Aplicacao", "Aplic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Usuarios.Servico", "Usuarios.Servico\Usuarios.Servico.csproj", "{BE7F0E52-8886-4082-BAAF-10973C1B3E31}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Usuarios.Banco", "Usuarios.Banco\Usuarios.Banco.sqlproj", "{1C433F05-10CF-4B83-AF25-E2CDCCE7A931}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,12 @@ Global
 		{BE7F0E52-8886-4082-BAAF-10973C1B3E31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE7F0E52-8886-4082-BAAF-10973C1B3E31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE7F0E52-8886-4082-BAAF-10973C1B3E31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C433F05-10CF-4B83-AF25-E2CDCCE7A931}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C433F05-10CF-4B83-AF25-E2CDCCE7A931}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C433F05-10CF-4B83-AF25-E2CDCCE7A931}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1C433F05-10CF-4B83-AF25-E2CDCCE7A931}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C433F05-10CF-4B83-AF25-E2CDCCE7A931}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C433F05-10CF-4B83-AF25-E2CDCCE7A931}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +61,7 @@ Global
 		{D391749B-5718-49E2-8547-B2C4051BBD2D} = {E79B2BD5-4BE5-4ED8-9306-57056E951112}
 		{016092AC-02EC-4485-ACB7-11F22D47C282} = {63B3689B-9754-48F5-ACA6-A9539581418F}
 		{BE7F0E52-8886-4082-BAAF-10973C1B3E31} = {D0733046-C263-4E68-A57F-C58648703ED5}
+		{1C433F05-10CF-4B83-AF25-E2CDCCE7A931} = {E79B2BD5-4BE5-4ED8-9306-57056E951112}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {62AFB730-E7B6-4629-B950-B6E612EBAE41}
