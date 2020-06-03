@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Usuarios.Dominio.Entidades;
 
-namespace Usuarios.Infraestrutura.Dados
+namespace Usuarios.Infraestrutura.Dados.Contexto
 {
     public class Contexto: DbContext
     {

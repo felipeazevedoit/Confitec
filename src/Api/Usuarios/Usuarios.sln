@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 Dominio", "05 Dominio", "{B6EE41C6-7EE6-4293-B78D-CB67AB8B185D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 Dominio", "04 Dominio", "{B6EE41C6-7EE6-4293-B78D-CB67AB8B185D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Usuarios.Dominio", "Dominio\Usuarios.Dominio\Usuarios.Dominio.csproj", "{1AA97ECB-AFF4-4CEF-BA54-82E857B886E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Usuarios.Dominio", "Dominio\Usuarios.Dominio\Usuarios.Dominio.csproj", "{1AA97ECB-AFF4-4CEF-BA54-82E857B886E3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 Repositorio", "03 Repositorio", "{AD5D12E8-FEF6-417B-86D7-9E0440C043E6}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 Infraestrutura", "04 Infraestrutura", "{A6332661-79DE-4F1E-B9F3-FE5AF0A24AA1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 Infraestrutura", "03 Infraestrutura", "{A6332661-79DE-4F1E-B9F3-FE5AF0A24AA1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 Servico", "02 Servico", "{63B3689B-9754-48F5-ACA6-A9539581418F}"
 EndProject
@@ -19,13 +17,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Dados", "01 Dados", "{E7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Api", "01 Api", "{D70D0F5B-422F-4BE8-9064-4A99ABE86DFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Usuarios.Apresentacao.Api", "Apresentacao\Api\Usuarios.Apresentacao.Api\Usuarios.Apresentacao.Api.csproj", "{DFC66781-3833-4D36-AEE7-E67945F7A654}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Usuarios.Apresentacao.Api", "Apresentacao\Api\Usuarios.Apresentacao.Api\Usuarios.Apresentacao.Api.csproj", "{DFC66781-3833-4D36-AEE7-E67945F7A654}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Usuarios.Servico", "Servico\Usuarios.Servico\Usuarios.Servico.csproj", "{576AEBA8-8356-4DEF-91BE-C2EC857C9604}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Usuarios.Servico", "Servico\Usuarios.Servico\Usuarios.Servico.csproj", "{576AEBA8-8356-4DEF-91BE-C2EC857C9604}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Usuarios.Repositorio", "Repositorio\Usuarios.Repositorio\Usuarios.Repositorio.csproj", "{E66BD37E-6C65-4AB0-9248-D952A70879A7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Usuarios.Infraestrutura.Dados", "Infraestrutura\Dados\Usuarios.Infraestrutura.Dados\Usuarios.Infraestrutura.Dados.csproj", "{D391749B-5718-49E2-8547-B2C4051BBD2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Usuarios.Infraestrutura.Dados", "Infraestrutura\Dados\Usuarios.Infraestrutura.Dados\Usuarios.Infraestrutura.Dados.csproj", "{D391749B-5718-49E2-8547-B2C4051BBD2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,10 +41,6 @@ Global
 		{576AEBA8-8356-4DEF-91BE-C2EC857C9604}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{576AEBA8-8356-4DEF-91BE-C2EC857C9604}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{576AEBA8-8356-4DEF-91BE-C2EC857C9604}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E66BD37E-6C65-4AB0-9248-D952A70879A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E66BD37E-6C65-4AB0-9248-D952A70879A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E66BD37E-6C65-4AB0-9248-D952A70879A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E66BD37E-6C65-4AB0-9248-D952A70879A7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D391749B-5718-49E2-8547-B2C4051BBD2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D391749B-5718-49E2-8547-B2C4051BBD2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D391749B-5718-49E2-8547-B2C4051BBD2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,7 +55,6 @@ Global
 		{D70D0F5B-422F-4BE8-9064-4A99ABE86DFB} = {D0733046-C263-4E68-A57F-C58648703ED5}
 		{DFC66781-3833-4D36-AEE7-E67945F7A654} = {D70D0F5B-422F-4BE8-9064-4A99ABE86DFB}
 		{576AEBA8-8356-4DEF-91BE-C2EC857C9604} = {63B3689B-9754-48F5-ACA6-A9539581418F}
-		{E66BD37E-6C65-4AB0-9248-D952A70879A7} = {AD5D12E8-FEF6-417B-86D7-9E0440C043E6}
 		{D391749B-5718-49E2-8547-B2C4051BBD2D} = {E79B2BD5-4BE5-4ED8-9306-57056E951112}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
