@@ -11,10 +11,6 @@ namespace Usuarios.Infraestrutura.Dados.Contexto
 
         public Contexto(DbContextOptions<Contexto> options) : base(options) { }
 
-        public Contexto([NotNullAttribute] DbContextOptions options) : base(options)
-        {
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UsuarioMap());

@@ -7,6 +7,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Http;
 using Usuarios.Infraestrutura.Dados.Contexto;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Reflection;
+using System.IO;
 
 namespace Usuarios.Servico
 {
@@ -23,7 +26,7 @@ namespace Usuarios.Servico
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
+            
             services.AddDbContext<Contexto>
                 (options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
@@ -61,6 +64,9 @@ namespace Usuarios.Servico
             {
                 endpoints.MapControllers();
             });
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1"));
         }
     }
 }

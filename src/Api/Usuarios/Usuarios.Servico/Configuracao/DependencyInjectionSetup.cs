@@ -1,7 +1,8 @@
-﻿using MediatR;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System;
+using Usuarios.Aplicacao.Interfaces;
 using Usuarios.Aplicacao.Servicos;
+using Usuarios.Dominio.Interfaces.Repositorio;
 using Usuarios.Infraestrutura.Dados.Contexto;
 using Usuarios.Infraestrutura.Dados.Repositorio;
 
@@ -14,13 +15,11 @@ namespace Usuarios.Servico.Configuracao
             if (services == null) throw new ArgumentNullException(nameof(services));
 
             // Aplicacao
-            services.AddScoped<UsuarioServico, UsuarioServico>();
-
+            services.AddScoped<IUsuarioServico, UsuarioServico>();
 
             // Infraestrutura - Dados 
-            services.AddScoped<UsuarioRepositorio, UsuarioRepositorio>();
+            services.AddScoped<IUsuario, UsuarioRepositorio>();
             services.AddScoped<Contexto>();
-
 
         }
     }

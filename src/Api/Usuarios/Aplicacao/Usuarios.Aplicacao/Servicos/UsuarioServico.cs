@@ -6,7 +6,6 @@ using Usuarios.Aplicacao.Interfaces;
 using Usuarios.Aplicacao.Modelo;
 using Usuarios.Dominio.Entidades;
 using Usuarios.Dominio.Interfaces.Repositorio;
-using Usuarios.Infraestrutura.Dados.Repositorio;
 
 namespace Usuarios.Aplicacao.Servicos
 {
@@ -21,34 +20,73 @@ namespace Usuarios.Aplicacao.Servicos
             _iUsuario = iUsuario;
         }
 
-        public void Adicionar(UsuarioModelo usuarioModelo)
+        public UsuarioModelo Adicionar(UsuarioModelo usuarioModelo)
         {
-            _iUsuario.Adicionar(_mapper.Map<Usuario>(usuarioModelo));
+            try
+            {
+                return _mapper.Map<UsuarioModelo>(_iUsuario.Adicionar(_mapper.Map<Usuario>(usuarioModelo)));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
         }
 
-        public void Alterar(UsuarioModelo usuarioModelo)
+        public UsuarioModelo Alterar(UsuarioModelo usuarioModelo)
         {
-            _iUsuario.Alterar(_mapper.Map<Usuario>(usuarioModelo));
+            try
+            {
+                return _mapper.Map<UsuarioModelo>(_iUsuario.Alterar(_mapper.Map<Usuario>(usuarioModelo)));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _iUsuario.Dispose();
         }
 
         public IEnumerable<UsuarioModelo> Listar()
         {
-            return _iUsuario.Listar().ProjectTo<UsuarioModelo>(_mapper.ConfigurationProvider);
+            try
+            {
+                return _iUsuario.Listar().ProjectTo<UsuarioModelo>(_mapper.ConfigurationProvider);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
         }
 
         public UsuarioModelo ObterPorId(int id)
         {
-            return _mapper.Map<UsuarioModelo>(_iUsuario.ObterPorId(id));
+            try
+            {
+                return _mapper.Map<UsuarioModelo>(_iUsuario.ObterPorId(id));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
         }
 
         public void Remove(int id)
         {
-            _iUsuario.Excluir(id);
+            try
+            {
+                _iUsuario.Excluir(id);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
     }
 }

@@ -1,46 +1,78 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Usuarios.Aplicacao.Interfaces;
+using Usuarios.Aplicacao.Modelo;
 
 namespace Usuarios.Servico.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
-    public class UsuarioController : ControllerBase
+    [Route("[controller]")]
+    public class UsuarioController : ApiController
     {
-        // GET: api/Usuario
+        private readonly IUsuarioServico _iUsuarioServico;
+
+        public UsuarioController(IUsuarioServico iUsuarioServico)
+        {
+            _iUsuarioServico = iUsuarioServico;
+        }
+
+      
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            return Response(_iUsuarioServico.Listar().ToList());
         }
 
-        // GET: api/Usuario/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        [HttpGet]
+        [Route("Usuario/{id:int}")]
+        public IActionResult Get(int id)
         {
-            return "value";
+            return Response(_iUsuarioServico.ObterPorId(id));
         }
 
-        // POST: api/Usuario
+
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post([FromBody]UsuarioModelo usuarioModelo)
         {
+            if (!ModelState.IsValid)
+            {
+                return Response(_iUsuarioServico.Adicionar(usuarioModelo));
+            }
+            else
+            {
+                return BadRequest(new
+                {
+                    success = false,
+                    errors = usuarioModelo
+                });
+            }
         }
 
-        // PUT: api/Usuario/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut("{UsuarioModelo}")]
+        public IActionResult Put([FromBody]UsuarioModelo usuarioModelo)
         {
+            if (!ModelState.IsValid)
+            {
+                return Response(_iUsuarioServico.Alterar(usuarioModelo));
+            }
+            else
+            {
+                return BadRequest(new
+                {
+                    success = false,
+                    errors = usuarioModelo
+                });
+            }
         }
 
-        // DELETE: api/ApiWithActions/5
+
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+            _iUsuarioServico.Remove(id);
+            return Response();
         }
     }
 }
