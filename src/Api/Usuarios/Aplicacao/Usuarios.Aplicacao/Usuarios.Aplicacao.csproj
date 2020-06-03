@@ -6,12 +6,16 @@
 
   <ItemGroup>
     <Folder Include="Interfaces\" />
-    <Folder Include="Mapeamento\" />
     <Folder Include="Servicos\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dominio\Usuarios.Dominio\Usuarios.Dominio.csproj" />
+    <ProjectReference Include="..\..\Infraestrutura\Dados\Usuarios.Infraestrutura.Dados\Usuarios.Infraestrutura.Dados.csproj" />
   </ItemGroup>
 
 </Project>
