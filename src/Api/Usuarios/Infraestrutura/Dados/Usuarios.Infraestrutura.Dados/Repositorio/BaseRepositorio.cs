@@ -7,7 +7,7 @@ namespace Usuarios.Infraestrutura.Dados.Repositorio
 {
     public class BaseRepositorio<T> : IDisposable, IBase<T> where T : class
     {
-        private Contexto.Contexto _Contexto;
+        protected readonly Contexto.Contexto _Contexto;
 
         public BaseRepositorio(Contexto.Contexto contexto)
         {
@@ -31,11 +31,12 @@ namespace Usuarios.Infraestrutura.Dados.Repositorio
         public void Dispose()
         {
             _Contexto.Dispose();
+            GC.SuppressFinalize(this);
         }
 
         public void Excluir(int id)
         {
-            _Contexto.Set<T>().Remove(Select(id));
+            _Contexto.Set<T>().Remove(this.ObterPorId(id));
             _Contexto.SaveChanges();
         }
 

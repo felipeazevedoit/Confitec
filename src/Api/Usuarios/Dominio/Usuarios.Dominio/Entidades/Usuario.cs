@@ -7,6 +7,7 @@ namespace Usuarios.Dominio.Entidades
         #region Propriedades
         public int Id { get; protected set ; }
         public string Nome { get; protected set; }
+        public string Email { get; set; }
         public string Sobrenome { get; protected set; }
         public DateTime DataNascimento { get; protected set; }
         public int Escolaridade { get; protected set; }
