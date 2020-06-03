@@ -1,13 +1,10 @@
 ﻿using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Usuarios.Aplicacao.Modelo;
 using Usuarios.Dominio.Entidades;
 
 namespace Usuarios.Aplicacao.Mapeamento
 {
-   public class ModeloParaDominio: Profile
+    public class ModeloParaDominio: Profile
     {
         public ModeloParaDominio()
         {

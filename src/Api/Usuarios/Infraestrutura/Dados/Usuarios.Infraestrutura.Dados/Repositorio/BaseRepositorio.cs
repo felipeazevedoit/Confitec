@@ -40,9 +40,9 @@ namespace Usuarios.Infraestrutura.Dados.Repositorio
             _Contexto.SaveChanges();
         }
 
-        public IEnumerable<T> Listar()
+        public IQueryable<T> Listar()
         {
-            return _Contexto.Set<T>().ToList();
+            return _Contexto.Set<T>();
         }
 
         public T ObterPorId(int id)
