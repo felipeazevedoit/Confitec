@@ -4,7 +4,7 @@ using Usuarios.Dominio.Entidades;
 
 namespace Usuarios.Infraestrutura.Dados.Mapeamento
 {
-    class UsuarioMap : IEntityTypeConfiguration<Usuario>
+    public class UsuarioMap : IEntityTypeConfiguration<Usuario>
     {
 
 
